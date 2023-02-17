@@ -50,6 +50,8 @@
             this.button19 = new System.Windows.Forms.Button();
             this.button20 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.operator_label = new System.Windows.Forms.Label();
+            this.first_num_label = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button1
@@ -61,6 +63,7 @@
             this.button1.TabIndex = 0;
             this.button1.Text = "%";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -71,6 +74,7 @@
             this.button2.TabIndex = 1;
             this.button2.Text = "2";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -81,6 +85,7 @@
             this.button3.TabIndex = 2;
             this.button3.Text = "4";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
@@ -102,6 +107,7 @@
             this.button5.TabIndex = 4;
             this.button5.Text = "0";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button6
             // 
@@ -112,6 +118,7 @@
             this.button6.TabIndex = 5;
             this.button6.Text = "7";
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button7
             // 
@@ -122,6 +129,7 @@
             this.button7.TabIndex = 6;
             this.button7.Text = "5";
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button8
             // 
@@ -153,6 +161,7 @@
             this.button10.TabIndex = 9;
             this.button10.Text = "/";
             this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // button11
             // 
@@ -163,6 +172,7 @@
             this.button11.TabIndex = 10;
             this.button11.Text = "*";
             this.button11.UseVisualStyleBackColor = true;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
             // button12
             // 
@@ -173,6 +183,7 @@
             this.button12.TabIndex = 11;
             this.button12.Text = "+";
             this.button12.UseVisualStyleBackColor = true;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
             // 
             // button13
             // 
@@ -183,25 +194,27 @@
             this.button13.TabIndex = 12;
             this.button13.Text = "-";
             this.button13.UseVisualStyleBackColor = true;
+            this.button13.Click += new System.EventHandler(this.button13_Click);
             // 
             // button14
             // 
             this.button14.Font = new System.Drawing.Font("Microsoft YaHei UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button14.Location = new System.Drawing.Point(214, 203);
+            this.button14.Location = new System.Drawing.Point(217, 203);
             this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(197, 61);
+            this.button14.Size = new System.Drawing.Size(194, 61);
             this.button14.TabIndex = 13;
             this.button14.Text = "<=";
             this.button14.UseVisualStyleBackColor = true;
             // 
             // button15
             // 
-            this.button15.Location = new System.Drawing.Point(136, 203);
+            this.button15.Location = new System.Drawing.Point(138, 203);
             this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(84, 61);
+            this.button15.Size = new System.Drawing.Size(81, 61);
             this.button15.TabIndex = 14;
             this.button15.Text = "C";
             this.button15.UseVisualStyleBackColor = true;
+            this.button15.Click += new System.EventHandler(this.button15_Click);
             // 
             // button16
             // 
@@ -222,6 +235,7 @@
             this.button17.TabIndex = 16;
             this.button17.Text = "6";
             this.button17.UseVisualStyleBackColor = true;
+            this.button17.Click += new System.EventHandler(this.button17_Click);
             // 
             // button18
             // 
@@ -232,6 +246,7 @@
             this.button18.TabIndex = 17;
             this.button18.Text = "3";
             this.button18.UseVisualStyleBackColor = true;
+            this.button18.Click += new System.EventHandler(this.button18_Click);
             // 
             // button19
             // 
@@ -257,19 +272,39 @@
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Location = new System.Drawing.Point(12, 69);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(410, 191);
+            this.label1.Size = new System.Drawing.Size(385, 131);
             this.label1.TabIndex = 20;
             this.label1.Text = "0";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // operator_label
+            // 
+            this.operator_label.ForeColor = System.Drawing.Color.DimGray;
+            this.operator_label.Location = new System.Drawing.Point(336, 23);
+            this.operator_label.Name = "operator_label";
+            this.operator_label.Size = new System.Drawing.Size(61, 46);
+            this.operator_label.TabIndex = 21;
+            this.operator_label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // first_num_label
+            // 
+            this.first_num_label.ForeColor = System.Drawing.Color.DimGray;
+            this.first_num_label.Location = new System.Drawing.Point(174, 23);
+            this.first_num_label.Name = "first_num_label";
+            this.first_num_label.Size = new System.Drawing.Size(156, 46);
+            this.first_num_label.TabIndex = 22;
+            this.first_num_label.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(409, 536);
+            this.Controls.Add(this.first_num_label);
+            this.Controls.Add(this.operator_label);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button20);
             this.Controls.Add(this.button19);
@@ -323,6 +358,8 @@
         private System.Windows.Forms.Button button19;
         private System.Windows.Forms.Button button20;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label operator_label;
+        private System.Windows.Forms.Label first_num_label;
     }
 }
 
