@@ -129,5 +129,51 @@ namespace CalculatorApp
             this.label1.ResetText();
         }
 
+        private void button8_Click(object sender, EventArgs e)
+        {
+            double first_num;
+            double second_num;
+            double output_num = 0;
+            double.TryParse(this.first_num_label.Text, out first_num);
+            double.TryParse(this.label1.Text, out second_num);
+            if (this.operator_label.Text == "+")
+            {
+                output_num = first_num + second_num;
+
+            }else if (this.operator_label.Text == "-")
+            {
+                output_num = first_num - second_num;
+            }
+            else if (this.operator_label.Text == "*")
+            {
+                output_num = first_num * second_num;
+            }
+            else if (this.operator_label.Text == "/")
+            {
+                output_num = first_num / second_num;
+            }
+            else if (this.operator_label.Text == "%")
+            {
+                output_num = first_num % second_num;
+            }
+            this.label1.Text= output_num.ToString();
+            this.first_num_label.ResetText();
+            this.operator_label.ResetText();    
+        }
+
+        private void button20_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void button16_Click(object sender, EventArgs e)
+        {
+            this.label1.Text = this.label1.Text + ".";
+        }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            this.label1.Text = this.label1.Text.Remove(this.label1.Text.Length - 1,1);
+        }
     }
 }

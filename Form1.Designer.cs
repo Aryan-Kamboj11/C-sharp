@@ -140,6 +140,7 @@
             this.button8.TabIndex = 7;
             this.button8.Text = "=";
             this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // button9
             // 
@@ -205,6 +206,7 @@
             this.button14.TabIndex = 13;
             this.button14.Text = "<=";
             this.button14.UseVisualStyleBackColor = true;
+            this.button14.Click += new System.EventHandler(this.button14_Click);
             // 
             // button15
             // 
@@ -225,6 +227,7 @@
             this.button16.TabIndex = 15;
             this.button16.Text = ".";
             this.button16.UseVisualStyleBackColor = true;
+            this.button16.Click += new System.EventHandler(this.button16_Click);
             // 
             // button17
             // 
@@ -262,12 +265,13 @@
             // button20
             // 
             this.button20.Font = new System.Drawing.Font("Microsoft YaHei UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button20.Image = ((System.Drawing.Image)(resources.GetObject("button20.Image")));
             this.button20.Location = new System.Drawing.Point(279, 457);
             this.button20.Name = "button20";
             this.button20.Size = new System.Drawing.Size(132, 68);
             this.button20.TabIndex = 19;
-            this.button20.Text = "Exit";
             this.button20.UseVisualStyleBackColor = true;
+            this.button20.Click += new System.EventHandler(this.button20_Click);
             // 
             // label1
             // 
